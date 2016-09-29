@@ -1,0 +1,19 @@
+server:
+  port: 2000
+  
+spring:
+   application:
+      name: service-web
+   datasource:
+      url: jdbc:postgresql://localhost:5432/db_micropayment
+      username: postgres
+      password: root
+      driverClassName: org.postgresql.Driver
+   jpa:
+      hibernate:
+         ddl-auto: update
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:1000}/eureka/

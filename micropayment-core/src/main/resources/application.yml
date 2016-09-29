@@ -1,0 +1,14 @@
+server:
+  port: 2000
+  
+spring:
+   application:
+      name: micropayment-core
+   datasource:
+      url: jdbc:postgresql://localhost:5432/db_micropayment
+      username: postgres
+      password: root
+      driverClassName: org.postgresql.Driver
+   jpa:
+      hibernate:
+         ddl-auto: update
