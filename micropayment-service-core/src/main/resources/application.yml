@@ -1,10 +1,20 @@
 server:
   port: 3000
-  
 spring:
   application:
     name: service-core
-    
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_micropayment
+    username: postgres
+    password: system
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  activemq:
+    broker-url: failover://tcp://localhost:61616
+    user: admin
+    password: admin
 eureka:
   client:
     serviceUrl:

@@ -1,9 +1,15 @@
 package com.indivara.micro.common.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class GenericMessage {
-
+public class GenericMessage implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private Date date;
 	private String title;
 	private Object body;
