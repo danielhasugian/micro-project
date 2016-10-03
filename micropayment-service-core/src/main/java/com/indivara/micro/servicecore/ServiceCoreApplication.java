@@ -15,10 +15,10 @@ import org.springframework.context.annotation.Configuration;
 @EnableHystrixDashboard
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan({"com.indivara.micro.core", "com.indivara.micro.common", "com.indivara.micro.servicecore"})
-public class ServiceWebApplication {
+@ComponentScan(basePackages = {"com.indivara.micro.servicecore","com.indivara.micro.core","com.indivara.micro.common"})
+public class ServiceCoreApplication {
 	
 	public static void main(String[] args){
-		SpringApplication.run(ServiceWebApplication.class, args);
+		SpringApplication.run(ServiceCoreApplication.class, args);
 	}
 }

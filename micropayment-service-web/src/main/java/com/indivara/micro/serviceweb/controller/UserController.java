@@ -32,7 +32,7 @@ public class UserController extends CommonController {
 	
 	@RequestMapping(value = "findall", method = RequestMethod.GET)
 	public @ResponseBody GenericResponse isExist(HttpServletRequest request) {
-		restTemplate.getForObject("http://localhost:3000/findall", GenericMessage.class);
+		restTemplate.getForObject(clientHost+"/findall", GenericMessage.class);
 		Object object = jmsTemplate.receiveAndConvert(queue);
 		GenericMessage msg = (GenericMessage) object;
 		return getMessage(new Date(), "Exist", msg, Boolean.FALSE, request.getRequestURI());
@@ -40,7 +40,7 @@ public class UserController extends CommonController {
 
 	@RequestMapping(value = "findbyusername", method = RequestMethod.GET)
 	public @ResponseBody GenericResponse isExist(@RequestParam String username, HttpServletRequest request) {
-		restTemplate.getForObject("http://localhost:3000/findbyusername?username="+username+"", GenericMessage.class);
+		restTemplate.getForObject(clientHost+"/findbyusername?username="+username+"", GenericMessage.class);
 		GenericMessage msg =(GenericMessage)jmsTemplate.receiveAndConvert(queue);
 		return getMessage(new Date(), "Exist", msg, Boolean.FALSE,
 				request.getRequestURI());

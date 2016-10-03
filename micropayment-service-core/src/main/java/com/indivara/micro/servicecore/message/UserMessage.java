@@ -37,13 +37,11 @@ public class UserMessage {
 	 * @return
 	 */
 	@RequestMapping(value = "findall", method = RequestMethod.GET)
-	public @ResponseBody GenericResponse isExist(HttpServletRequest request) {
+	public void findAll(HttpServletRequest request) {
 		GenericMessage gm = new GenericMessage(new Date(), "send JMS", "", queue);
 		gm.setDataObject((Serializable) userService.findAll());
 
 		jmsTemplate.convertAndSend(queue, gm);
-		GenericResponse gr = new GenericResponse(null, null, gm, null, null);
-		return gr;
 	}
 
 	/**

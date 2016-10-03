@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-	  <groupId>com.indivara.micropayment</groupId>
-	  <artifactId>micropayment</artifactId>
-	  <version>0.0.1-SNAPSHOT</version>
-	  <relativePath>../micropayment/pom.xml</relativePath>
+		<groupId>com.indivara.micropayment</groupId>
+		<artifactId>micropayment</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../micropayment/pom.xml</relativePath>
 	</parent>
 	
 	<artifactId>micropayment-service-core</artifactId>
@@ -14,29 +14,10 @@
 	</properties>
   
 	<dependencies>
-		<!-- import micropayment common -->
-		<dependency>
-			<groupId>com.indivara.micropayment</groupId>
-			<artifactId>micropayment-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<!-- import micropayment core -->
-		<dependency>
-			<groupId>com.indivara.micropayment</groupId>
-			<artifactId>micropayment-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
 		<!-- import postgre -->
 		<dependency>
 		    <groupId>org.postgresql</groupId>
 		    <artifactId>postgresql</artifactId>
-		</dependency>
-	
-		<!-- import spring boot -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
 		<!-- import spring cloud -->
@@ -64,6 +45,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-activemq</artifactId>
 		</dependency>
+	
+		<!-- import micropayment core -->
+		<dependency>
+			<groupId>com.indivara.micropayment</groupId>
+			<artifactId>micropayment-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	
 	<dependencyManagement>
@@ -83,6 +71,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+		        <executions>
+		            <execution>
+		                <goals>
+		                    <goal>repackage</goal>
+		                </goals>
+		            </execution>
+		        </executions>
 			</plugin>
 		</plugins>
 	</build>

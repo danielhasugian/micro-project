@@ -9,13 +9,14 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.1.RELEASE</version>
+		<relativePath></relativePath>
 	</parent>
 	
 	<modules>
 		<module>../micropayment-common</module>
 		<module>../micropayment-core</module>
+		<module>../micropayment-service-core</module> 
 		<module>../micropayment-service-web</module>
-		<module>../micropayment-service-core</module>
 		<module>../micropayment-even-bus</module>
 		<module>../micropayment-server</module>
 	</modules>

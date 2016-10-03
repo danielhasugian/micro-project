@@ -3,12 +3,17 @@ package com.indivara.micro.serviceweb.common;
 import java.util.Date;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Value;
 
 import com.indivara.micro.common.dto.GenericResponse;
 
 public class CommonController {
 	
 	final static Logger LOGGER = Logger.getLogger(CommonController.class);
+	
+	@Value("${client.host}")
+	protected String clientHost;
+	
 	
 	protected GenericResponse genericResponse;
 	
