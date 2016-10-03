@@ -4,6 +4,7 @@
     <groupId>com.indivara.micropayment</groupId>
     <artifactId>micropayment</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../micropayment/pom.xml</relativePath>
   </parent>
   <artifactId>micropayment-even-bus</artifactId>
   

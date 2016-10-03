@@ -4,9 +4,15 @@
     <groupId>com.indivara.micropayment</groupId>
     <artifactId>micropayment</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../micropayment/pom.xml</relativePath>
   </parent>
   
   <artifactId>micropayment-common</artifactId>
+  
+  <properties>
+  		<biz.source_code.version>2010-12-19</biz.source_code.version>
+  </properties>
+  
   
   <dependencies>
 	<dependency>
@@ -17,5 +23,10 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-data-jpa</artifactId>
 	</dependency>
+    <dependency>
+        <groupId>biz.source_code</groupId>
+        <artifactId>base64coder</artifactId>
+        <version>${biz.source_code.version}</version>
+    </dependency>
   </dependencies>
 </project>

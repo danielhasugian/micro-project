@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/db_micropayment
     username: postgres
-    password: system
+    password: root
     driverClassName: org.postgresql.Driver
   jpa:
     hibernate:
@@ -19,3 +19,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:1000}/eureka/
+      
+micropayment:
+  queue: micropayment.queue

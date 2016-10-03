@@ -15,9 +15,9 @@ import org.springframework.context.annotation.Configuration;
 @EnableHystrixDashboard
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.indivara.micro")
+@ComponentScan({"com.indivara.micro.core", "com.indivara.micro.common", "com.indivara.micro.servicecore"})
 public class ServiceWebApplication {
-
+	
 	public static void main(String[] args){
 		SpringApplication.run(ServiceWebApplication.class, args);
 	}
