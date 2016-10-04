@@ -4,3 +4,23 @@ server:
 spring:
    application:
       name: even-bus
+   activemq:
+    broker-url: failover://tcp://localhost:61616
+    user: admin
+    password: admin
+    pool:
+      enabled: true
+      configuration:
+        max-connections: 10
+          
+integration-bus: 
+  maximum: 
+    concurrent: 
+      consumer: 10
+micropayment:
+  queue: jms:micropayment.queue
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:1000}/eureka/

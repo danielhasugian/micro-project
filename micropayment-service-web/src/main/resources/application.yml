@@ -3,11 +3,6 @@ server:
 spring:
   application:
     name: service-web
-  datasource:
-    url: jdbc:postgresql://localhost:5432/db_micropayment
-    username: postgres
-    password: root
-    driverClassName: org.postgresql.Driver
   activemq:
     packages:
       trust-all: true
