@@ -20,7 +20,14 @@
 			<artifactId>micropayment-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-	
+
+		<!-- import micropayment common -->
+		<dependency>
+			<groupId>com.indivara.micropayment</groupId>
+			<artifactId>micropayment-model</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+			
 		<!-- import spring boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

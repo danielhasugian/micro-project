@@ -35,7 +35,7 @@ public class UserController extends CommonController {
 		restTemplate.getForObject(clientHost+"/findall", GenericMessage.class);
 		Object object = jmsTemplate.receiveAndConvert(queue);
 		GenericMessage msg = (GenericMessage) object;
-		return getMessage(new Date(), "Exist", msg, Boolean.FALSE, request.getRequestURI());
+		return getMessage(new Date(), "Exist", msg.getDataObject(), Boolean.FALSE, request.getRequestURI());
 	}
 
 	@RequestMapping(value = "findbyusername", method = RequestMethod.GET)

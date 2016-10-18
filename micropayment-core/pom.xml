@@ -15,10 +15,10 @@
   
 	<dependencies>
 		
-		<!-- import micropayment common -->
+		<!-- import micropayment model -->
 		<dependency>
 			<groupId>com.indivara.micropayment</groupId>
-			<artifactId>micropayment-common</artifactId>
+			<artifactId>micropayment-model</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		

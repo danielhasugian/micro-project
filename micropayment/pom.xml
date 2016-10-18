@@ -14,6 +14,7 @@
 	
 	<modules>
 		<module>../micropayment-common</module>
+		<module>../micropayment-model</module>
 		<module>../micropayment-core</module>
 		<module>../micropayment-service-core</module> 
 		<module>../micropayment-service-web</module>

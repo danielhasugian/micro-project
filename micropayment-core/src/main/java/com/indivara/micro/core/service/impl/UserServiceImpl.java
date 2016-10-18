@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.indivara.micro.core.model.User;
 import com.indivara.micro.core.repository.UserRepository;
 import com.indivara.micro.core.service.UserService;
+import com.indivara.micro.model.User;
 
 @Component("userService")
 public class UserServiceImpl implements UserService {

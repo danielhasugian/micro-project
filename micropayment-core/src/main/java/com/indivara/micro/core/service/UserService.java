@@ -2,7 +2,7 @@ package com.indivara.micro.core.service;
 
 import java.util.List;
 
-import com.indivara.micro.core.model.User;
+import com.indivara.micro.model.User;
 
 public interface UserService {
 	
